@@ -1,0 +1,274 @@
+/* Импорт шрифта Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* Общие стили */
+
+body {
+    filter: blur(5px); /* Изначально размытие */
+    animation: removeBlur 2s forwards; /* Запускаем анимацию */
+}
+
+@keyframes removeBlur {
+    from {
+        filter: blur(5px);
+    }
+
+    to {
+        filter: blur(0px);
+    }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease; /* Анимация при наведении на ссылку */
+}
+
+    a:hover {
+        color: #0056b3; /* Эффект при наведении */
+    }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Шапка */
+header {
+    background-color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для шапки */
+    position: sticky; /* чтобы шапка всегда была наверху */
+    top: 0;
+    z-index: 100; /* чтобы шапка перекрывала все остальные элементы*/
+}
+
+.logo img { /* Стили для изображения внутри блока .logo */
+    max-width: 100%;
+    height: auto; 
+    display: block; 
+    opacity: 0.8; /* Добавляем прозрачность */
+}
+
+.logo {
+    float: left;
+    width: 150px; /*  Установите ширину блока логотипа */
+    padding-top: 5px;
+    transition: transform 0.3s ease; /* Анимация поворота логотипа */
+}
+
+    .logo:hover {
+        transform: rotate(5deg); /* Поворот логотипа при наведении */
+    }
+
+nav {
+    float: right;
+}
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex; /* Отображение меню в строку */
+    }
+
+    nav li {
+        margin-left: 20px;
+    }
+
+/* Баннер */
+.banner img {
+    width: 100%; /* Ширина баннера - 100% от родительского элемента */
+    height: auto; /* Автоматическая высота (сохраняет пропорции) */
+    display: block; /* Убирает лишние отступы */
+    border-radius: 8px; /* Скругление углов баннера */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Тень для баннера */
+}
+
+.banner {
+    margin-bottom: 20px;
+}
+
+
+/* Контент */
+main {
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
+    color: #28a745; /* Цвет заголовков*/
+    margin-bottom: 15px;
+}
+
+.event img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: block; /* Убирает лишний отступ снизу */
+    margin-bottom: 10px;
+}
+
+    .event:hover {
+        transform: translateY(-5px); /* Сдвиг при наведении */
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+    }
+
+.news-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+}
+
+/* Футер */
+footer {
+    background-color: #343a40; /* Темный фон для футера */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #495057; /* Разделитель */
+}
+
+/* Адаптивная верстка */
+/* Для мобильных телефонов (iPhone X) */
+@media (max-width: 414px) {
+    .container {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .banner img {
+        border-radius: 0; /* Убираем скругление для мобильных */
+    }
+}
+
+/* Для планшетов (iPad Pro) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 15px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    nav {
+        float: none;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+        nav ul {
+            justify-content: center;
+        }
+}
+
+/* Для компьютеров (ширина экрана от 1600px)*/
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1400px; /* Расширяем контейнер для больших экранов */
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #28a745, #007bff, #04fca1, #38f10b, #efdd0b, #ff0000); /*  Ваш градиент */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block; /*  Чтобы градиент применялся только к тексту  */
+}
+
+/*Стилизация текста*/
+.animated-gradient {
+    background: linear-gradient(90deg, #28a745, #007bff, #04fca1, #38f10b, #efdd0b, #ff0000); /*  Более яркие цвета */
+    background-size: 200% 200%; /*  Увеличиваем размер фона  */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Для плавного изменения при наведении */
+    animation: moveGradient 5s linear infinite; /* Бесконечная анимация */
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%; /*  Начальная позиция  */
+    }
+
+    100% {
+        background-position: 100% 50%; /* Конечная позиция */
+    }
+}
+
+.animated-gradient:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень при наведении */
+    transform: translateY(-2px); /* Небольшой сдвиг вверх при наведении */
+}
+
+/* Анимация текста*/
+.animated-text {
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.shake-text {
+    display: inline-block; /*  Чтобы анимация применялась к тексту, а не ко всей строке */
+    animation: shake 0.8s cubic-bezier(.36,.07,.19,.97) both infinite; /* Запускаем анимацию */
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0); /* Сдвиг влево */
+    }
+
+    20%, 80% {
+        transform: translate3d(2px, 0, 0); /* Сдвиг вправо */
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0); /* Сдвиг влево сильнее */
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0); /* Сдвиг вправо сильнее */
+    }
+}
+
+/* Размытие*/
+.blurred {
+    filter: blur(5px);
+}
+
+

@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Волонтерское движение | Как стать волонтером</title>
+    <meta name="description" content="Узнайте, как присоединиться к нашему волонтерскому движению">
+    <meta name="keywords" content="волонтер, доброволец, регистрация, как стать">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Open Sans', sans-serif; /* Используем нестандартный шрифт */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Логотип волонтерского движения">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="home.html">О нас</a></li>
+                    <li><a href="page2.html">Мероприятия</a></li>
+                    <li><a href="page3.html">Как стать волонтером</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner">
+        <img src="images/banner.jpg">
+    </section>
+
+    <main>
+        <div class="container">
+            <h1>Как стать волонтером</h1>
+            <p>Присоединиться к нашему волонтерскому движению очень просто!</p>
+            <h2>Шаги для регистрации:</h2>
+            <ol>
+                <li>Заполните форму регистрации ниже.</li>
+                <li>Дождитесь подтверждения от координатора.</li>
+                <li>Примите участие в одном из наших мероприятий!</li>
+            </ol>
+
+            <h2>Форма регистрации</h2>
+            <form action="#" method="post">
+                <label for="name">Ваше имя:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Ваш email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="phone">Ваш телефон:</label>
+                <input type="tel" id="phone" name="phone"><br><br>
+
+                <label for="interests">Сфера интересов:</label>
+                <select id="interests" name="interests">
+                    <option value="children">Помощь детям</option>
+                    <option value="animals">Помощь животным</option>
+                    <option value="environment">Экологические проекты</option>
+                    <option value="other">Другое</option>
+                </select><br><br>
+
+                <input type="submit" value="Отправить">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Волонтерское движение. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
