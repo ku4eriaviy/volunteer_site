@@ -194,7 +194,7 @@ footer {
 }
 
 .gradient-text {
-    background: linear-gradient(to right, #28a745, #007bff, #04fca1, #38f10b, #efdd0b, #ff0000); /*  Ваш градиент */
+    background: linear-gradient(to right, #28a745, #007bff, #04fca1, #38f10b, #efdd0b, #ff0000, #ff6a00); /*  Ваш градиент */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block; /*  Чтобы градиент применялся только к тексту  */
